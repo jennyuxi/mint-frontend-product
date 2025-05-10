@@ -6,6 +6,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/GeistVF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeistMono';
+  src: url('/fonts/GeistMonoVF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -87,6 +101,17 @@ body {
 @layer base {
   * {
     @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
